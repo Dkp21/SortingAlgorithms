@@ -1,15 +1,16 @@
 include Rules.mk
 
-cppsrc = $(wildcard src/*.cpp)
+cppsrc := $(wildcard src/*.cpp) \
+	  $(wildcard ../CommonFunc/src/*.cpp)
 
 objs = $(cppsrc:.cpp=.o)
 
 $(EXECUTABLE): $(objs)
-	$(shell mkdir $(BUILD_DIR) > /dev/null 2>&1)
-	$(CXX) $(CXXFLAGS) -o $(BUILD_DIR)/$@ $^
+	mkdir -p $(BUILD_DIR)
+	$(CXX) -o $(BUILD_DIR)/$@ $^ $(CXXFLAGS)
 
 .PHONY: clean
 
 clean:
-	$(shell rm -rf $(BUILD_DIR) > /dev/null 2>&1)
-	$(shell rm src/*.o > /dev/null 2>&1)
+	rm -fr $(BUILD_DIR)
+	rm -f $(objs)

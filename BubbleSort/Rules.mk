@@ -1,4 +1,6 @@
 CXX        := g++
-CXXFLAGS   := -Wall
+INC        := ../CommonFunc/inc/
+CXXFLAGS   := -Wall -g -I$(INC)
 EXECUTABLE := bubble_sort
 BUILD_DIR  := build_dir
+DEPS       := cmn_api.h

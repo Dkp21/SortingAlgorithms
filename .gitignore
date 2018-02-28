@@ -1,0 +1,5 @@
+BubbleSort/build_dir/
+BubbleSort/src/bubble_sort.o
+InsertionSort/build_dir/
+InsertionSort/src/insertion_sort.o
+CommonFunc/src/cmn_api.o
