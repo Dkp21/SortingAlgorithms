@@ -5,7 +5,7 @@
 
 #include "cmn_api.h"
 
-/* Insertion sort algorithm */
+/* Selection sort algorithm */
 void selection_sort(int *arr, unsigned n)
 {
     unsigned i = 0;
