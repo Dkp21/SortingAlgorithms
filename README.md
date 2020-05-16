@@ -1,5 +1,5 @@
 # SortingAlgorithms
-Different shorting algorithms
+# Different shorting algorithms
 
 |Sorting Algorithms      |       Time complexity |
 --------------------------------------------------
